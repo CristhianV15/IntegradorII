@@ -1,0 +1,26 @@
+<?xml version='1.0' encoding='UTF-8' ?>
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml"
+      xmlns:h="http://xmlns.jcp.org/jsf/html">
+    <h:head>
+        <title>Facelet Title</title>
+    </h:head>
+    <h:body>
+        <h:form>
+            <h:panelGrid columns="2">
+                <h:outputLabel value="Codigo"></h:outputLabel>
+                <h:inputText value="#{managedAutor.autor.codaut}"></h:inputText>               
+                <h:outputLabel value="Nombre"></h:outputLabel>
+                <h:inputText value="#{managedAutor.autor.nomaut}"></h:inputText>
+                <h:outputLabel value="Apellido"></h:outputLabel>
+                <h:inputText value="#{managedAutor.autor.apeaut}"></h:inputText>   
+                <h:outputLabel value="Nacionalidad"></h:outputLabel>
+                <h:inputText value="#{managedAutor.autor.nacaut}"></h:inputText>   
+                <h:commandButton value="Aceptar"
+                                 actionListener="#{managedAutor.guardar()}"
+                                 action="listar.xhtml"></h:commandButton>
+            </h:panelGrid>
+        </h:form>
+    </h:body>
+</html>
+
