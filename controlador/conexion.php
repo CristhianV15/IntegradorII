@@ -9,7 +9,7 @@ function conectar() {
 
 //Función de listado de producto
 function listarProducto($conn) {
-    $sql="select idProducto, CatProducto, Nombre from producto";
+    $sql="select idProducto, categoria.NombreCategoria, Nombre from producto INNER JOIN categoria ON producto.CatProducto = 	categoria.CatProducto";
     $res= mysqli_query($conn, $sql);
     $vec=array();
     while($f= mysqli_fetch_array($res))
