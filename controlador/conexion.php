@@ -17,4 +17,11 @@ function listarProducto($conn) {
     return $vec;
 }
 
+//Para el logeo hay 3 estados : administrador, usuario y veterinario, la validación se hace en proceso_logeo.php
+function validarUsuario($usu,$pas,$conn){
+    $sql="select estado from usuarios where nombre='$usu' and contraseña='$pas'";
+    $res=mysqli_query($conn, $sql) or die(mysqli_error($conn));
+    $fila = mysqli_fetch_row($res);
+    return $fila[0];
+}
 ?>
