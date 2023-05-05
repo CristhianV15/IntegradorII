@@ -26,4 +26,4 @@
 </body>
 </html>
 
-    
+<!--En este index se hara un crud de prueba con una tabla para aplicarlo a las demas paginas-->
